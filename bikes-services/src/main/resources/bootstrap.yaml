@@ -1,6 +1,7 @@
-
-
-
-spring:
-  application:
-  name: bikes-services
+  spring:
+    application:
+    name: bikes-services
+    cloud:
+      config:
+        enabled: true
+        uri: http://localhost:8082
