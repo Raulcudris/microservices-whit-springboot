@@ -1,0 +1,13 @@
+server:
+  port: 8081
+Spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: config-server
+          uri: https://github.com/Raulcudris/microservices-whit-springboot
+          search-paths: config-data
+  application:
+    name: config-service
+
