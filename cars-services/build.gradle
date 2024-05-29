@@ -17,6 +17,10 @@ configurations {
 	}
 }
 
+ext {
+	set('springCloudVersion', "2021.0.4")
+}
+
 repositories {
 	mavenCentral()
 }

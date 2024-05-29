@@ -11,6 +11,10 @@ java {
 	sourceCompatibility = '11'
 }
 
+ext {
+	set('springCloudVersion', "2021.0.4")
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
