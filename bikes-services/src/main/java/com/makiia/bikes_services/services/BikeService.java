@@ -24,7 +24,6 @@ public class BikeService {
         Bike bikeNew = bikeRepository.save(bike);
         return bikeNew;
     }
-
     public List<Bike> byUserId(Long userId) {
         return bikeRepository.findByUserId(userId);
     }
