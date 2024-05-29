@@ -1,7 +1,10 @@
-spring:
-  application:
-    name: bikes-services
+Spring:
   cloud:
     config:
-      enable: true
+      enabled: true
       uri: http://localhost:8081
+  application:
+    name: bikes-services
+
+
+
