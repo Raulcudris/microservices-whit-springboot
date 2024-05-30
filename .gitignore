@@ -4,6 +4,7 @@
 ### Java ###
 # Compiled class file
 *.class
+zipkin-server-3.4.0-exec.jar
 
 # Log file
 *.log
@@ -15,8 +16,8 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
+.jar
+.war
 *.nar
 *.ear
 *.zip
