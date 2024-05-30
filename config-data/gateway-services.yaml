@@ -19,17 +19,7 @@ spring:
           enabled: true
       routes:
         -id: users-services
-        uri: lb//users-services
-        predicates:
-          -Path: /user/**
-        -id: cars-services
-        uri: lb//cars-services
-        predicates:
-          -Path: /car/**
-        -id: bikes-services
-        uri: lb//bikes-services
-        predicates:
-          -Path: /bike/**
+         uri: lb://users-services
+         predicates:
+          - Path=//user/**
 
-
-  
