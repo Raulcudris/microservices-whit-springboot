@@ -65,7 +65,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
         Car carNew = userService.saveCar(userId, car);
-        return ResponseEntity.ok(car);
+        return ResponseEntity.ok(carNew);
     }
 
     @PostMapping("/savebike/{userId}")
@@ -74,7 +74,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
         Bike bikeNew = userService.saveBike(userId, bike);
-        return ResponseEntity.ok(bike);
+        return ResponseEntity.ok(bikeNew);
     }
 
     @GetMapping("/getAll/{userId}")
@@ -83,6 +83,5 @@ public class UserController {
         Map<String, Object> result = userService.getUserAndVehicles(userId);
         return ResponseEntity.ok(result);
     }
-
 
 }

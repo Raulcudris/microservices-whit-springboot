@@ -40,12 +40,12 @@ public class UserService {
     }
 
     public List<Car> getCars (Long userId){
-        List<Car> cars = restTemplate.restTemplate().getForObject("http://localhost:8002/car/byuser/"+userId,List.class);
+        List<Car> cars = restTemplate.restTemplate().getForObject("http://cars-services/car/byuser/"+userId,List.class);
         return  cars;
     }
 
     public List<Bike> getBikes (Long userId){
-        List<Bike> bikes = restTemplate.restTemplate().getForObject("http://localhost:8003/bike/byuser/"+userId,List.class);
+        List<Bike> bikes = restTemplate.restTemplate().getForObject("http://bikes-services/bike/byuser/"+userId,List.class);
         return  bikes;
     }
 

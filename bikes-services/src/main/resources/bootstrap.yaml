@@ -5,6 +5,3 @@ Spring:
       uri: http://localhost:8081
   application:
     name: bikes-services
-
-
-
