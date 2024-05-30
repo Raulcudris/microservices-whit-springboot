@@ -4,7 +4,7 @@
 ### Java ###
 # Compiled class file
 *.class
-zipkin-server-3.4.0-exec.jar
+zipkin-server-2.23.2-exec.jar
 
 # Log file
 *.log
