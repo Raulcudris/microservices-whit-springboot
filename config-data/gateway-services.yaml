@@ -1,6 +1,5 @@
 server:
-  #port: ${PORT:${SERVER_PORT:0}}
-  port: 8001
+  port: 8080
 eureka:
   client:
     fetch-registry: true
@@ -8,7 +7,6 @@ eureka:
     service-url:
       defaul-zone: http://localhost:8761/eureka
   instance:
-    #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     hostname: localhost
 
 spring:
@@ -21,5 +19,13 @@ spring:
         -id: users-services
          uri: lb://users-services
          predicates:
-          -Path= //user/**
+          - Path=/user/**
+        -id: cars-services
+         uri: lb://cars-services
+         predicates:
+          - Path=/car/**
+        -id: bikes-services
+         uri: lb://bikes-services
+         predicates:
+          - Path=/bike/**
 
