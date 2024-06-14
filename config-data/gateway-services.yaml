@@ -48,4 +48,4 @@ spring:
             client-id: microservices-client
             client-secret: db71fcef-2ef1-43fb-8555-8697ec73109f
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/microservices-client"
+            redirect-uri: "{baseUrl}//login/oauth2/code/microservices-client"
