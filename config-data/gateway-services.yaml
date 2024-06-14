@@ -23,6 +23,8 @@ spring:
           uri: lb://users-services
           predicates:
             - Path=/user/**
+          filters:
+            -RemoveRequestHeader=Cookies
         - id: cars-services
           uri: lb://cars-services
           predicates:
@@ -38,14 +40,14 @@ spring:
       client:
         provider:
           keycloak:
-            authorization-uri: http://localhost:8080/realms/microservices/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8080/realms/microservices/protocol/openid-connect/userinfo
+            authorization-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/auth
+            userinfo-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
-            token-uri: http://localhost:8080/realms/microservices/protocol/openid-connect/token
+            token-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/token
           registration:
-            client-name:
-            provider:
-            client-id:
-            client-secret:
-            authorization-grant-type:
-            redirect-uri:
+            microservices-client:
+            provider: keycloak
+            client-id: microservices-client
+            client-secret: db71fcef-2ef1-43fb-8555-8697ec73109f
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/microservices-client"
