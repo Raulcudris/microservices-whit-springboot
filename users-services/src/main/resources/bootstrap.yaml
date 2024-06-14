@@ -5,3 +5,10 @@ Spring:
       uri: http://localhost:8081
   application:
     name: users-services
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/microservices-realm
+
+
