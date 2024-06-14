@@ -1,5 +1,4 @@
 package com.makiia.gateway_service.security;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -7,18 +6,21 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @EnableWebFluxSecurity
 public class SecurityConfig {
-
     @Bean
-    public SecurityWebFilterChain filterChain(ServerHttpSecurity httpSecurity){
-        httpSecurity.authorizeExchange().anyExchange().authenticated()
-                .and()
-                .oauth2Login(Customizer.withDefaults());
-
-        httpSecurity.csrf().disable();
-        return httpSecurity.build();
+    public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
+        http
+                .authorizeExchange(exchanges -> exchanges
+                        .pathMatchers("/public/**")
+                        .permitAll()
+                        .anyExchange().
+                        authenticated()
+                )
+                .oauth2Login(withDefaults());
+        return http.build();
     }
-
 }
