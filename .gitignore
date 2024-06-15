@@ -5,7 +5,6 @@
 # Compiled class file
 *.class
 zipkin-server-2.23.2-exec.jar
-keycloak-24.0.4/
 
 # Log file
 *.log

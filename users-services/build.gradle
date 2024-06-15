@@ -12,7 +12,7 @@ java {
 }
 
 ext {
-	set('springCloudVersion', "2020.0.3")
+	set('springCloudVersion', "2021.0.4")
 }
 
 configurations {
@@ -33,15 +33,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-	implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin:3.0.0'
+	implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin:3.1.6'
 	implementation 'org.springframework.boot:spring-boot-starter-aop:2.5.4'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
-
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:2.5.7'
-	implementation 'org.springframework.boot:spring-boot-starter-security:2.5.7'
-	implementation 'org.springframework.security:spring-security-oauth2-jose:5.5.4'
-
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
