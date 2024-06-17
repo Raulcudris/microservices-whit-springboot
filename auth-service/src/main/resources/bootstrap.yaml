@@ -4,7 +4,7 @@ Spring:
       enabled: true
       uri: http://localhost:8081
   application:
-    name: auth-service
+    name: auth-services
 
 jwt:
   secret: secret
