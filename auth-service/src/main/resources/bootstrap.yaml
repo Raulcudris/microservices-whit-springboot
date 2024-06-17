@@ -1,0 +1,10 @@
+Spring:
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+  application:
+    name: auth-services
+
+jwt:
+  secret: secret

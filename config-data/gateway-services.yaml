@@ -29,3 +29,7 @@ spring:
           uri: lb://bikes-services
           predicates:
             - Path=/bike/**
+        - id: auth-services
+          uri: lb://auth-services
+          predicates:
+            - Path=/auth/**
