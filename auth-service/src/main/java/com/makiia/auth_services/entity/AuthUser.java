@@ -1,4 +1,4 @@
-package com.makiia.auth_service.entity;
+package com.makiia.auth_services.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

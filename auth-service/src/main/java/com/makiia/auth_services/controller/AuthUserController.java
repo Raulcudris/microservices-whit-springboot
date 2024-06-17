@@ -1,9 +1,9 @@
-package com.makiia.auth_service.controller;
+package com.makiia.auth_services.controller;
 
-import com.makiia.auth_service.dto.AuthUserDto;
-import com.makiia.auth_service.dto.TokenDto;
-import com.makiia.auth_service.entity.AuthUser;
-import com.makiia.auth_service.service.AuthUserService;
+import com.makiia.auth_services.dto.AuthUserDto;
+import com.makiia.auth_services.dto.TokenDto;
+import com.makiia.auth_services.entity.AuthUser;
+import com.makiia.auth_services.service.AuthUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

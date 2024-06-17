@@ -1,4 +1,4 @@
-package com.makiia.auth_service.security;
+package com.makiia.auth_services.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

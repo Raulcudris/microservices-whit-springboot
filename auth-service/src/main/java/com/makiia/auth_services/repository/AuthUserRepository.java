@@ -1,6 +1,6 @@
-package com.makiia.auth_service.repository;
+package com.makiia.auth_services.repository;
 
-import com.makiia.auth_service.entity.AuthUser;
+import com.makiia.auth_services.entity.AuthUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

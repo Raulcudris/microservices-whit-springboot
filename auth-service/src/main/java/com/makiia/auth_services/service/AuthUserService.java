@@ -1,10 +1,10 @@
-package com.makiia.auth_service.service;
+package com.makiia.auth_services.service;
 
-import com.makiia.auth_service.dto.AuthUserDto;
-import com.makiia.auth_service.dto.TokenDto;
-import com.makiia.auth_service.entity.AuthUser;
-import com.makiia.auth_service.repository.AuthUserRepository;
-import com.makiia.auth_service.security.JwtProvider;
+import com.makiia.auth_services.dto.AuthUserDto;
+import com.makiia.auth_services.dto.TokenDto;
+import com.makiia.auth_services.entity.AuthUser;
+import com.makiia.auth_services.repository.AuthUserRepository;
+import com.makiia.auth_services.security.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

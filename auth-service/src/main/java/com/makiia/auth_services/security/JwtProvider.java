@@ -1,6 +1,6 @@
-package com.makiia.auth_service.security;
+package com.makiia.auth_services.security;
 
-import com.makiia.auth_service.entity.AuthUser;
+import com.makiia.auth_services.entity.AuthUser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
