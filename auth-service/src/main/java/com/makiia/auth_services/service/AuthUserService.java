@@ -1,5 +1,6 @@
 package com.makiia.auth_services.service;
 import com.makiia.auth_services.dto.AuthUserDto;
+import com.makiia.auth_services.dto.NewUserDto;
 import com.makiia.auth_services.dto.RequestDto;
 import com.makiia.auth_services.dto.TokenDto;
 import com.makiia.auth_services.entity.AuthUser;
@@ -18,7 +19,7 @@ public class AuthUserService {
     PasswordEncoder passwordEncoder;
     @Autowired
     JwtProvider jwtProvider;
-    public AuthUser save(AuthUserDto dto) {
+    public AuthUser save(NewUserDto dto) {
         Optional<AuthUser> user = authUserRepository.findByUserName(dto.getUserName());
         if(user.isPresent())
             return null;
@@ -26,6 +27,7 @@ public class AuthUserService {
         AuthUser authUser = AuthUser.builder()
                 .userName(dto.getUserName())
                 .password(password)
+                .role(dto.getRole())
                 .build();
         return authUserRepository.save(authUser);
     }
