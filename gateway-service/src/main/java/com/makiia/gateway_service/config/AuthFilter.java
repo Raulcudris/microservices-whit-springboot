@@ -1,6 +1,8 @@
 package com.makiia.gateway_service.config;
 
+import com.makiia.gateway_service.dto.RequestDto;
 import com.makiia.gateway_service.dto.TokenDto;
+import org.springframework.cloud.client.loadbalancer.RequestData;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
@@ -34,6 +36,7 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
             return webClient.build()
                     .post()
                     .uri("http://auth-services/auth/validate?token="+chunks[1])
+                    .bodyValue(new RequestDto(exchange.getRequest().getPath().toString(), exchange.getRequest().getMethod().toString()))
                     .retrieve().bodyToMono(TokenDto.class)
                     .map( t->{
                         t.getToken();
