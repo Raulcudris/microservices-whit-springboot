@@ -1,5 +1,4 @@
 package com.makiia.auth_services.service;
-
 import com.makiia.auth_services.dto.AuthUserDto;
 import com.makiia.auth_services.dto.TokenDto;
 import com.makiia.auth_services.entity.AuthUser;
