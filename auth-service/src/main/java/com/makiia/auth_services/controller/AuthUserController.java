@@ -1,6 +1,7 @@
 package com.makiia.auth_services.controller;
 
 import com.makiia.auth_services.dto.AuthUserDto;
+import com.makiia.auth_services.dto.RequestDto;
 import com.makiia.auth_services.dto.TokenDto;
 import com.makiia.auth_services.entity.AuthUser;
 import com.makiia.auth_services.service.AuthUserService;
@@ -23,8 +24,8 @@ public class AuthUserController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<TokenDto> validate(@RequestParam String token){
-        TokenDto tokenDto = authUserService.validate(token);
+    public ResponseEntity<TokenDto> validate(@RequestParam String token, @RequestBody RequestDto dto){
+        TokenDto tokenDto = authUserService.validate(token, dto);
         if(tokenDto == null)
             return ResponseEntity.badRequest().build();
         return ResponseEntity.ok(tokenDto);
