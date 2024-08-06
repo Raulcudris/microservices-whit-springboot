@@ -1,6 +1,7 @@
 package com.makiia.auth_services.controller;
 
 import com.makiia.auth_services.dto.AuthUserDto;
+import com.makiia.auth_services.dto.NewUserDto;
 import com.makiia.auth_services.dto.RequestDto;
 import com.makiia.auth_services.dto.TokenDto;
 import com.makiia.auth_services.entity.AuthUser;
@@ -32,7 +33,7 @@ public class AuthUserController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<AuthUser> create(@RequestBody AuthUserDto dto){
+    public ResponseEntity<AuthUser> create(@RequestBody NewUserDto dto){
         AuthUser authUser = authUserService.save(dto);
         if(authUser == null)
             return ResponseEntity.badRequest().build();
