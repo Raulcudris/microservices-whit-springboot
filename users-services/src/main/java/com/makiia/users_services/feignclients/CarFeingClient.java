@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @FeignClient(name = "cars-services")
-//@RequestMapping("/car")
+@RequestMapping("/car")
 public interface CarFeingClient {
     @PostMapping("/car")
     Car saveCar(@RequestBody Car car);
